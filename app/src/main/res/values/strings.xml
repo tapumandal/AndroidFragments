@@ -1,3 +1,10 @@
 <resources>
     <string name="app_name">AnrdoidFrgments</string>
+
+    <!-- TODO: Remove or change this placeholder text -->
+    <string name="hello_blank_fragment">Hello blank fragment</string>
+    <string name="fragment_first">Fragment FIRST</string>
+    <string name="fragment_second">Fragment SECOND</string>
+    <string name="first_frag_btn">First Frag BTN</string>
+    <string name="second_frag_btn">Second frag BTN</string>
 </resources>
