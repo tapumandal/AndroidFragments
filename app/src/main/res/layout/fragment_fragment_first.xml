@@ -15,4 +15,12 @@
         android:gravity="center"
         />
 
+    <TextView
+        android:id="@+id/no"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:text="@string/fragment_first"
+        android:gravity="center"
+        />
+
 </FrameLayout>
