@@ -15,11 +15,6 @@ public class MainActivity extends FragmentActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
-
-//        FragmentFirst fragmentFirst = new FragmentFirst();
-
-
-
     }
 
     public void loadFirstFragment(View view) {
@@ -27,8 +22,9 @@ public class MainActivity extends FragmentActivity {
 
         Intent intent = new Intent();
         intent.putExtra("main_et_value", editText.getText().toString());
+        getSupportFragmentManager().beginTransaction().replace(R.id.main_layout, new FragmentFirst(editText.getText().toString())).addToBackStack(null).commit();
 
-        getSupportFragmentManager().beginTransaction().replace(R.id.main_layout, new FragmentFirst()).addToBackStack(null).commit();
+
     }
 
     public void loadSecondFragment(View view) {

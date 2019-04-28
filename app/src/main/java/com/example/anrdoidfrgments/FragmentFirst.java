@@ -1,5 +1,6 @@
 package com.example.anrdoidfrgments;
 
+import android.annotation.SuppressLint;
 import android.content.Context;
 import android.content.Intent;
 import android.net.Uri;
@@ -17,11 +18,20 @@ public class FragmentFirst extends Fragment {
 
 
     private View view;
+    private Intent intent;
+    private String text;
+
+    public FragmentFirst() {
+
+    }
+    @SuppressLint("ValidFragment")
+    public FragmentFirst(String toString) {
+        this.text = toString;
+    }
 
     @Override
     public View onCreateView(LayoutInflater inflater, ViewGroup container, Bundle savedInstanceState) {
 
-//        Intent intent = new Intent();
 
         view = inflater.inflate(R.layout.fragment_fragment_first, container, false);
 
@@ -33,6 +43,8 @@ public class FragmentFirst extends Fragment {
     public void onViewCreated(@NonNull View view, @Nullable Bundle savedInstanceState) {
         super.onViewCreated(view, savedInstanceState);
 
-        view.findViewById(R.id.tv_frag_first);
+        TextView tv = view.findViewById(R.id.tv_frag_first);
+        tv.setText(this.text);
+
     }
 }
