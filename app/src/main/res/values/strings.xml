@@ -7,4 +7,6 @@
     <string name="fragment_second">Fragment SECOND</string>
     <string name="first_frag_btn">First Frag BTN</string>
     <string name="second_frag_btn">Second frag BTN</string>
+    <string name="et_fragment_first">Write for Second fragment</string>
+    <string name="btn_frag_first">Go To Second Frag</string>
 </resources>
