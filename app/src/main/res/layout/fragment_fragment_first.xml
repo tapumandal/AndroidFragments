@@ -12,15 +12,28 @@
         android:layout_width="match_parent"
         android:layout_height="match_parent"
         android:text="@string/fragment_first"
-        android:gravity="center"
+        android:gravity="center_horizontal"
+        android:paddingTop="100dp"
+        android:textSize="30dp"
+        android:textStyle="bold"
         />
 
-    <TextView
-        android:id="@+id/no"
+    <EditText
+        android:id="@+id/et_frag_first"
         android:layout_width="match_parent"
         android:layout_height="match_parent"
-        android:text="@string/fragment_first"
-        android:gravity="center"
+        android:text="@string/et_fragment_first"
+        android:gravity="center_horizontal"
+        android:paddingTop="200dp"
+        />
+
+    <Button
+        android:id="@+id/btn_frag_first"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/btn_frag_first"
+        android:layout_gravity="center_horizontal"
+        android:layout_marginTop="250dp"
         />
 
 </FrameLayout>

@@ -3,11 +3,13 @@ package com.example.anrdoidfrgments;
 import android.content.Intent;
 import android.support.v4.app.FragmentActivity;
 import android.os.Bundle;
+import android.support.v7.app.AppCompatActivity;
 import android.view.View;
 import android.widget.EditText;
 import android.widget.TextView;
+import android.widget.Toast;
 
-public class MainActivity extends FragmentActivity {
+public class MainActivity extends AppCompatActivity  {
 
     private EditText editText;
 
@@ -22,7 +24,7 @@ public class MainActivity extends FragmentActivity {
 
         Intent intent = new Intent();
         intent.putExtra("main_et_value", editText.getText().toString());
-        getSupportFragmentManager().beginTransaction().replace(R.id.main_layout, new FragmentFirst(editText.getText().toString())).addToBackStack(null).commit();
+        getSupportFragmentManager().beginTransaction().replace(R.id.main_layout, new FragmentFirst()).addToBackStack(null).commit();
 
 
     }
@@ -30,4 +32,7 @@ public class MainActivity extends FragmentActivity {
     public void loadSecondFragment(View view) {
         getSupportFragmentManager().beginTransaction().replace(R.id.main_layout, new FragmentSecond()).commit();
     }
+
+
+
 }
