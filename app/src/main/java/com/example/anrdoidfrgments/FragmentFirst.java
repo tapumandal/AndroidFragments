@@ -16,6 +16,7 @@ import android.widget.EditText;
 import android.widget.TextView;
 
 
+@SuppressLint("ValidFragment")
 public class FragmentFirst extends Fragment {
 
 
@@ -23,8 +24,8 @@ public class FragmentFirst extends Fragment {
     private Intent intent;
     private String text;
 
-    public FragmentFirst() {
-
+    public FragmentFirst(String str) {
+        this.text = str;
     }
 
 
@@ -44,7 +45,7 @@ public class FragmentFirst extends Fragment {
         super.onViewCreated(view, savedInstanceState);
 
         TextView tv = view.findViewById(R.id.tv_frag_first);
-        tv.setText(getActivity().getIntent().getStringExtra("main_et_value"));
+        tv.setText(this.text);
 
         view.findViewById(R.id.btn_frag_first).setOnClickListener(new View.OnClickListener() {
             @Override

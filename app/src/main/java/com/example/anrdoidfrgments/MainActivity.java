@@ -21,10 +21,7 @@ public class MainActivity extends AppCompatActivity  {
 
     public void loadFirstFragment(View view) {
         editText = (EditText) findViewById(R.id.et_main_activity);
-
-        Intent intent = new Intent();
-        intent.putExtra("main_et_value", editText.getText().toString());
-        getSupportFragmentManager().beginTransaction().replace(R.id.main_layout, new FragmentFirst()).addToBackStack(null).commit();
+        getSupportFragmentManager().beginTransaction().replace(R.id.main_layout, new FragmentFirst(editText.getText().toString())).addToBackStack(null).commit();
 
 
     }
